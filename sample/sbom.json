@@ -1,0 +1,3031 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:6fed021d-5552-4f58-9362-a7c8769c55c8",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-12-14T11:01:22Z",
+    "tools": {
+      "components": [
+        {
+          "group": "@cyclonedx",
+          "name": "cdxgen",
+          "version": "10.9.11",
+          "purl": "pkg:npm/%40cyclonedx/cdxgen@10.9.11",
+          "type": "application",
+          "bom-ref": "pkg:npm/@cyclonedx/cdxgen@10.9.11",
+          "author": "OWASP Foundation",
+          "publisher": "OWASP Foundation"
+        }
+      ]
+    },
+    "authors": [
+      {
+        "name": "OWASP Foundation"
+      }
+    ],
+    "lifecycles": [
+      {
+        "phase": "build"
+      }
+    ],
+    "component": {
+      "group": "",
+      "name": "text-generation-webui",
+      "version": "latest",
+      "type": "application",
+      "bom-ref": "pkg:gem/text-generation-webui@latest",
+      "purl": "pkg:gem/text-generation-webui@latest"
+    },
+    "properties": [
+      {
+        "name": "cdx:bom:componentTypes",
+        "value": "github\\npypi"
+      },
+      {
+        "name": "cdx:bom:componentNamespaces",
+        "value": "actions\\nsvenstaro"
+      }
+    ]
+  },
+  "components": [
+    {
+      "group": "",
+      "name": "audioop-lts",
+      "version": "0.2.2",
+      "description": "LTS Port of Python audioop",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "fd3d4602dc64914d462924a08c1a9816435a2155d74f325853c1f1ac3b2d9800"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:pypi/audioop-lts@0.2.2",
+      "type": "library",
+      "bom-ref": "pkg:pypi/audioop-lts@0.2.2",
+      "evidence": {
+        "identity": {
+          "field": "version",
+          "confidence": 0.6,
+          "methods": [
+            {
+              "technique": "manifest-analysis",
+              "confidence": 0.6,
+              "value": "Version specifiers: <1.0;"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers",
+          "value": "<1.0;"
+        }
+      ]
+    },
+    {
+      "author": "=?utf-8?q?Sebasti=C3=A1n_Ram=C3=ADrez?= <tiangolo@gmail.com>",
+      "group": "",
+      "name": "fastapi",
+      "version": "0.112.4",
+      "description": "FastAPI framework, high performance, easy to learn, fast to code, ready for production",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "6d4f9c3301825d4620665cace8e2bc34e303f61c05a5382d1d61a048ea7f2f37"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:pypi/fastapi@0.112.4",
+      "type": "framework",
+      "bom-ref": "pkg:pypi/fastapi@0.112.4",
+      "properties": [
+        {
+          "name": "cdx:pypi:latest_version",
+          "value": "0.124.4"
+        },
+        {
+          "name": "cdx:pypi:resolved_from",
+          "value": "fastapi"
+        }
+      ]
+    },
+    {
+      "author": "Aaron Swartz <me@aaronsw.com>",
+      "group": "",
+      "name": "html2text",
+      "version": "2025.4.15",
+      "description": "Turn HTML into equivalent Markdown-structured text.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "00569167ffdab3d7767a4cdf589b7f57e777a5ed28d12907d8c58769ec734acc"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:pypi/html2text@2025.4.15",
+      "type": "library",
+      "bom-ref": "pkg:pypi/html2text@2025.4.15"
+    },
+    {
+      "author": "Hugging Face, Inc. <julien@huggingface.co>",
+      "group": "",
+      "name": "huggingface-hub",
+      "version": "0.36.0",
+      "description": "Client library to download and publish models, datasets and other repos on the huggingface.co hub",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "7bcc9ad17d5b3f07b57c78e79d527102d08313caa278a641993acddcb894548d"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "url": "https://opensource.org/licenses/Apache-2.0"
+          }
+        },
+        {
+          "license": {
+            "name": "Apache"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/huggingface-hub@0.36.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/huggingface/huggingface_hub"
+        }
+      ],
+      "type": "framework",
+      "bom-ref": "pkg:pypi/huggingface-hub@0.36.0",
+      "properties": [
+        {
+          "name": "cdx:pypi:latest_version",
+          "value": "1.2.3"
+        },
+        {
+          "name": "cdx:pypi:resolved_from",
+          "value": "huggingface-hub"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "Jinja2",
+      "version": "3.1.6",
+      "description": "A very fast and expressive template engine.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "85ece4451f492d0c13c5dd7c13a64681a86afae63a5f347908daf103ce6d2f67"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "0BSD",
+            "url": "https://opensource.org/licenses/0BSD"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/jinja2@3.1.6",
+      "type": "library",
+      "bom-ref": "pkg:pypi/jinja2@3.1.6"
+    },
+    {
+      "author": "Manfred Stienstra, Yuri Takhteyev <Waylan limberg <python.markdown@gmail.com>>",
+      "group": "",
+      "name": "Markdown",
+      "version": "3.10",
+      "description": "Python implementation of John Gruber's Markdown.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "b5b99d6951e2e4948d939255596523444c0e677c669700b1d17aa4a8a464cb7c"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:pypi/markdown@3.10",
+      "type": "library",
+      "bom-ref": "pkg:pypi/markdown@3.10",
+      "evidence": {
+        "identity": {
+          "field": "version",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "source-code-analysis",
+              "confidence": 0.5,
+              "value": "PyPI package: Markdown"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers"
+        }
+      ]
+    },
+    {
+      "author": "Travis E. Oliphant et al.",
+      "group": "",
+      "name": "numpy",
+      "version": "2.2.0",
+      "description": "Fundamental package for array computing in Python",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "1e25507d85da11ff5066269d0bd25d06e0a0f2e908415534f3e603d2a78e4ffa"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "0BSD",
+            "url": "https://opensource.org/licenses/0BSD"
+          }
+        },
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "url": "https://opensource.org/licenses/Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/numpy@2.2.0",
+      "type": "framework",
+      "bom-ref": "pkg:pypi/numpy@2.2.0",
+      "properties": [
+        {
+          "name": "cdx:pypi:latest_version",
+          "value": "2.3.5"
+        },
+        {
+          "name": "cdx:pypi:resolved_from",
+          "value": "numpy"
+        }
+      ]
+    },
+    {
+      "author": "Samuel Colvin <s@muelcolvin.com>, Eric Jolibois <em.jolibois@gmail.com>, Hasan Ramezani <hasan.r67@gmail.com>, Adrian Garcia Badaracco <1755071+adriangb@users.noreply.github.com>, Terrence Dorsey <terry@pydantic.dev>, David Montague <david@pydantic.dev>, Serge Matveenko <lig@countzero.co>, Marcelo Trylesinski <marcelotryle@gmail.com>, Sydney Runkle <sydneymarierunkle@gmail.com>, David Hewitt <mail@davidhewitt.io>, Alex Hall <alex.mojaki@gmail.com>, Victorien Plot <contact@vctrn.dev>, Douwe Maan <hi@douwe.me>",
+      "group": "",
+      "name": "pydantic",
+      "version": "2.11.0",
+      "description": "Data validation using Python type hints",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d52535bb7aba33c2af820eaefd866f3322daf39319d03374921cd17fbbdf28f9"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:pypi/pydantic@2.11.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/pydantic@2.11.0",
+      "properties": [
+        {
+          "name": "cdx:pypi:latest_version",
+          "value": "2.12.5"
+        },
+        {
+          "name": "cdx:pypi:resolved_from",
+          "value": "pydantic"
+        }
+      ]
+    },
+    {
+      "author": "Mathieu Fenniak <biziqe@mathieu.fenniak.net>",
+      "group": "",
+      "name": "PyPDF2",
+      "version": "3.0.1",
+      "description": "A pure-python PDF library capable of splitting, merging, cropping, and transforming PDF files",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d16e4205cfee272fbdc0568b68d82be796540b1537508cef59388f839c191928"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "0BSD",
+            "url": "https://opensource.org/licenses/0BSD"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/pypdf2@3.0.1",
+      "type": "library",
+      "bom-ref": "pkg:pypi/pypdf2@3.0.1"
+    },
+    {
+      "author": "Steve Canny <stcanny@gmail.com>",
+      "group": "",
+      "name": "python-docx",
+      "version": "1.1.2",
+      "description": "Create, read, and update Microsoft Word .docx files.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "08c20d6058916fb19853fcf080f7f42b6270d89eac9fa5f8c15f691c0017fabe"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/python-docx@1.1.2",
+      "type": "library",
+      "bom-ref": "pkg:pypi/python-docx@1.1.2",
+      "properties": [
+        {
+          "name": "cdx:pypi:latest_version",
+          "value": "1.2.0"
+        },
+        {
+          "name": "cdx:pypi:resolved_from",
+          "value": "python-docx"
+        }
+      ]
+    },
+    {
+      "author": "Kirill Simonov <xi@resolvent.net>",
+      "group": "",
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "description": "YAML parser and emitter for Python",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "214ed4befebe12df36bcc8bc2b64b396ca31be9304b8f59e25c11cf94a4c033b"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/pyyaml@6.0.3",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://pyyaml.org/"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:pypi/pyyaml@6.0.3",
+      "evidence": {
+        "identity": {
+          "field": "version",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "source-code-analysis",
+              "confidence": 0.5,
+              "value": "PyPI package: PyYAML"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers"
+        }
+      ]
+    },
+    {
+      "author": "Kenneth Reitz <me@kennethreitz.org>",
+      "group": "",
+      "name": "requests",
+      "version": "2.32.5",
+      "description": "Python HTTP for Humans.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "2462f94637a34fd532264295e186976db0f5d453d1cdd31473c85a6a161affb6"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "url": "https://opensource.org/licenses/Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/requests@2.32.5",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://requests.readthedocs.io"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:pypi/requests@2.32.5",
+      "evidence": {
+        "identity": {
+          "field": "version",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "source-code-analysis",
+              "confidence": 0.5,
+              "value": "PyPI package: requests"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers"
+        }
+      ]
+    },
+    {
+      "author": "Will McGugan <willmcgugan@gmail.com>",
+      "group": "",
+      "name": "rich",
+      "version": "14.2.0",
+      "description": "Render rich text, tables, progress bars, syntax highlighting, markdown and more to the terminal",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "76bc51fe2e57d2b1be1f96c524b890b816e334ab4c1e45888799bfaab0021edd"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/rich@14.2.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/Textualize/rich"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:pypi/rich@14.2.0",
+      "evidence": {
+        "identity": {
+          "field": "version",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "source-code-analysis",
+              "confidence": 0.5,
+              "value": "PyPI package: rich"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "tqdm",
+      "version": "4.67.1",
+      "description": "Fast, Extensible Progress Meter",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "26445eca388f82e72884e0d580d5464cd801a3ea01e63e5601bdff9ba6a48de2"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MPL-2.0 AND MIT"
+        }
+      ],
+      "purl": "pkg:pypi/tqdm@4.67.1",
+      "type": "library",
+      "bom-ref": "pkg:pypi/tqdm@4.67.1",
+      "evidence": {
+        "identity": {
+          "field": "version",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "source-code-analysis",
+              "confidence": 0.5,
+              "value": "PyPI package: tqdm"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers"
+        }
+      ]
+    },
+    {
+      "author": "Abubakar Abid <gradio-team@huggingface.co>, Ali Abid <gradio-team@huggingface.co>, Ali Abdalla <gradio-team@huggingface.co>, Dawood Khan <gradio-team@huggingface.co>, Ahsen Khaliq <gradio-team@huggingface.co>, Pete Allen <gradio-team@huggingface.co>, Ömer Faruk Özdemir <gradio-team@huggingface.co>, Freddy A Boulton <gradio-team@huggingface.co>, Hannah Blair <gradio-team@huggingface.co>",
+      "group": "",
+      "name": "gradio",
+      "version": "4.37.0",
+      "description": "Python library for easily interacting with trained machine learning models",
+      "licenses": [],
+      "purl": "pkg:pypi/gradio@4.37.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/gradio@4.37.0",
+      "properties": [
+        {
+          "name": "cdx:pypi:latest_version",
+          "value": "6.1.0"
+        },
+        {
+          "name": "cdx:pypi:resolved_from",
+          "value": "gradio"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "https://github.com/oobabooga/gradio/releases/download/custom-build/gradio_client-1.0.2+custom.1-py3-none-any.whl",
+      "version": "",
+      "purl": "pkg:pypi/https:%2F%2Fgithub.com%2Foobabooga%2Fgradio%2Freleases%2Fdownload%2Fcustom-build%2Fgradio-client-1.0.2%252bcustom.1-py3-none-any.whl",
+      "type": "library",
+      "bom-ref": "pkg:pypi/https://github.com/oobabooga/gradio/releases/download/custom-build/gradio-client-1.0.2%2bcustom.1-py3-none-any.whl",
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers"
+        }
+      ]
+    },
+    {
+      "author": "Ralf Rademacher",
+      "group": "",
+      "name": "flask_cloudflared",
+      "version": "0.0.14",
+      "description": "Start a TryCloudflare Tunnel from your flask app.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "abd11c16030d5c68f91cf64efaecdebf09ab0dce10db43333aaebc790569bdbf"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "url": "https://opensource.org/licenses/Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/flask-cloudflared@0.0.14",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/UWUplus/flask-cloudflared"
+        }
+      ],
+      "type": "framework",
+      "bom-ref": "pkg:pypi/flask-cloudflared@0.0.14"
+    },
+    {
+      "author": "sysid <sysid@gmx.de>",
+      "group": "",
+      "name": "sse-starlette",
+      "version": "1.6.5",
+      "description": "SSE plugin for Starlette",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "68b6b7eb49be0c72a2af80a055994c13afcaa4761b29226beb208f954c25a642"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:pypi/sse-starlette@1.6.5",
+      "type": "library",
+      "bom-ref": "pkg:pypi/sse-starlette@1.6.5",
+      "properties": [
+        {
+          "name": "cdx:pypi:latest_version",
+          "value": "3.0.3"
+        },
+        {
+          "name": "cdx:pypi:resolved_from",
+          "value": "sse-starlette"
+        }
+      ]
+    },
+    {
+      "author": "Shantanu Jain <shantanu@openai.com>",
+      "group": "",
+      "name": "tiktoken",
+      "version": "0.12.0",
+      "description": "tiktoken is a fast BPE tokeniser for use with OpenAI's models",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "3de02f5a491cfd179aec916eddb70331814bd6bf764075d39e21d5862e533970"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/tiktoken@0.12.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/tiktoken@0.12.0",
+      "evidence": {
+        "identity": {
+          "field": "version",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "source-code-analysis",
+              "confidence": 0.5,
+              "value": "PyPI package: tiktoken"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama_cpp_binaries-0.66.0+vulkanavx-py3-none-win_amd64.whl",
+      "version": "",
+      "purl": "pkg:pypi/https:%2F%2Fgithub.com%2Foobabooga%2Fllama-cpp-binaries%2Freleases%2Fdownload%2Fv0.66.0%2Fllama-cpp-binaries-0.66.0%252bvulkanavx-py3-none-win-amd64.whl",
+      "type": "library",
+      "bom-ref": "pkg:pypi/https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama-cpp-binaries-0.66.0%2bvulkanavx-py3-none-win-amd64.whl",
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers",
+          "value": ";"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama_cpp_binaries-0.66.0+vulkanavx-py3-none-linux_x86_64.whl",
+      "version": "",
+      "purl": "pkg:pypi/https:%2F%2Fgithub.com%2Foobabooga%2Fllama-cpp-binaries%2Freleases%2Fdownload%2Fv0.66.0%2Fllama-cpp-binaries-0.66.0%252bvulkanavx-py3-none-linux-x86-64.whl",
+      "type": "library",
+      "bom-ref": "pkg:pypi/https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama-cpp-binaries-0.66.0%2bvulkanavx-py3-none-linux-x86-64.whl",
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers",
+          "value": ";"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama_cpp_binaries-0.66.0+vulkan-py3-none-win_amd64.whl",
+      "version": "",
+      "purl": "pkg:pypi/https:%2F%2Fgithub.com%2Foobabooga%2Fllama-cpp-binaries%2Freleases%2Fdownload%2Fv0.66.0%2Fllama-cpp-binaries-0.66.0%252bvulkan-py3-none-win-amd64.whl",
+      "type": "library",
+      "bom-ref": "pkg:pypi/https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama-cpp-binaries-0.66.0%2bvulkan-py3-none-win-amd64.whl",
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers",
+          "value": ";"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama_cpp_binaries-0.66.0+vulkan-py3-none-linux_x86_64.whl",
+      "version": "",
+      "purl": "pkg:pypi/https:%2F%2Fgithub.com%2Foobabooga%2Fllama-cpp-binaries%2Freleases%2Fdownload%2Fv0.66.0%2Fllama-cpp-binaries-0.66.0%252bvulkan-py3-none-linux-x86-64.whl",
+      "type": "library",
+      "bom-ref": "pkg:pypi/https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama-cpp-binaries-0.66.0%2bvulkan-py3-none-linux-x86-64.whl",
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers",
+          "value": ";"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama_cpp_binaries-0.66.0+cu124avx-py3-none-win_amd64.whl",
+      "version": "",
+      "purl": "pkg:pypi/https:%2F%2Fgithub.com%2Foobabooga%2Fllama-cpp-binaries%2Freleases%2Fdownload%2Fv0.66.0%2Fllama-cpp-binaries-0.66.0%252bcu124avx-py3-none-win-amd64.whl",
+      "type": "library",
+      "bom-ref": "pkg:pypi/https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama-cpp-binaries-0.66.0%2bcu124avx-py3-none-win-amd64.whl",
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers",
+          "value": ";"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama_cpp_binaries-0.66.0+cu124avx-py3-none-linux_x86_64.whl",
+      "version": "",
+      "purl": "pkg:pypi/https:%2F%2Fgithub.com%2Foobabooga%2Fllama-cpp-binaries%2Freleases%2Fdownload%2Fv0.66.0%2Fllama-cpp-binaries-0.66.0%252bcu124avx-py3-none-linux-x86-64.whl",
+      "type": "library",
+      "bom-ref": "pkg:pypi/https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama-cpp-binaries-0.66.0%2bcu124avx-py3-none-linux-x86-64.whl",
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers",
+          "value": ";"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama_cpp_binaries-0.66.0+cpuavx-py3-none-linux_x86_64.whl",
+      "version": "",
+      "purl": "pkg:pypi/https:%2F%2Fgithub.com%2Foobabooga%2Fllama-cpp-binaries%2Freleases%2Fdownload%2Fv0.66.0%2Fllama-cpp-binaries-0.66.0%252bcpuavx-py3-none-linux-x86-64.whl",
+      "type": "library",
+      "bom-ref": "pkg:pypi/https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama-cpp-binaries-0.66.0%2bcpuavx-py3-none-linux-x86-64.whl",
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers",
+          "value": ";"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama_cpp_binaries-0.66.0+cpuavx-py3-none-win_amd64.whl",
+      "version": "",
+      "purl": "pkg:pypi/https:%2F%2Fgithub.com%2Foobabooga%2Fllama-cpp-binaries%2Freleases%2Fdownload%2Fv0.66.0%2Fllama-cpp-binaries-0.66.0%252bcpuavx-py3-none-win-amd64.whl",
+      "type": "library",
+      "bom-ref": "pkg:pypi/https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama-cpp-binaries-0.66.0%2bcpuavx-py3-none-win-amd64.whl",
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers",
+          "value": ";"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama_cpp_binaries-0.66.0+cpuavx2-py3-none-linux_x86_64.whl",
+      "version": "",
+      "purl": "pkg:pypi/https:%2F%2Fgithub.com%2Foobabooga%2Fllama-cpp-binaries%2Freleases%2Fdownload%2Fv0.66.0%2Fllama-cpp-binaries-0.66.0%252bcpuavx2-py3-none-linux-x86-64.whl",
+      "type": "library",
+      "bom-ref": "pkg:pypi/https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama-cpp-binaries-0.66.0%2bcpuavx2-py3-none-linux-x86-64.whl",
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers",
+          "value": ";"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama_cpp_binaries-0.66.0+cpuavx2-py3-none-win_amd64.whl",
+      "version": "",
+      "purl": "pkg:pypi/https:%2F%2Fgithub.com%2Foobabooga%2Fllama-cpp-binaries%2Freleases%2Fdownload%2Fv0.66.0%2Fllama-cpp-binaries-0.66.0%252bcpuavx2-py3-none-win-amd64.whl",
+      "type": "library",
+      "bom-ref": "pkg:pypi/https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama-cpp-binaries-0.66.0%2bcpuavx2-py3-none-win-amd64.whl",
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers",
+          "value": ";"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama_cpp_binaries-0.66.0-py3-none-macosx_15_0_arm64.whl",
+      "version": "",
+      "purl": "pkg:pypi/https:%2F%2Fgithub.com%2Foobabooga%2Fllama-cpp-binaries%2Freleases%2Fdownload%2Fv0.66.0%2Fllama-cpp-binaries-0.66.0-py3-none-macosx-15-0-arm64.whl",
+      "type": "library",
+      "bom-ref": "pkg:pypi/https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama-cpp-binaries-0.66.0-py3-none-macosx-15-0-arm64.whl",
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers",
+          "value": ";"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama_cpp_binaries-0.66.0-py3-none-macosx_14_0_arm64.whl",
+      "version": "",
+      "purl": "pkg:pypi/https:%2F%2Fgithub.com%2Foobabooga%2Fllama-cpp-binaries%2Freleases%2Fdownload%2Fv0.66.0%2Fllama-cpp-binaries-0.66.0-py3-none-macosx-14-0-arm64.whl",
+      "type": "library",
+      "bom-ref": "pkg:pypi/https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama-cpp-binaries-0.66.0-py3-none-macosx-14-0-arm64.whl",
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers",
+          "value": ";"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama_cpp_binaries-0.66.0-py3-none-macosx_15_0_x86_64.whl",
+      "version": "",
+      "purl": "pkg:pypi/https:%2F%2Fgithub.com%2Foobabooga%2Fllama-cpp-binaries%2Freleases%2Fdownload%2Fv0.66.0%2Fllama-cpp-binaries-0.66.0-py3-none-macosx-15-0-x86-64.whl",
+      "type": "library",
+      "bom-ref": "pkg:pypi/https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama-cpp-binaries-0.66.0-py3-none-macosx-15-0-x86-64.whl",
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers",
+          "value": ";"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama_cpp_binaries-0.66.0-py3-none-macosx_14_0_x86_64.whl",
+      "version": "",
+      "purl": "pkg:pypi/https:%2F%2Fgithub.com%2Foobabooga%2Fllama-cpp-binaries%2Freleases%2Fdownload%2Fv0.66.0%2Fllama-cpp-binaries-0.66.0-py3-none-macosx-14-0-x86-64.whl",
+      "type": "library",
+      "bom-ref": "pkg:pypi/https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama-cpp-binaries-0.66.0-py3-none-macosx-14-0-x86-64.whl",
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers",
+          "value": ";"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama_cpp_binaries-0.66.0+rocm6.4.4avx-py3-none-linux_x86_64.whl",
+      "version": "",
+      "purl": "pkg:pypi/https:%2F%2Fgithub.com%2Foobabooga%2Fllama-cpp-binaries%2Freleases%2Fdownload%2Fv0.66.0%2Fllama-cpp-binaries-0.66.0%252brocm6.4.4avx-py3-none-linux-x86-64.whl",
+      "type": "library",
+      "bom-ref": "pkg:pypi/https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama-cpp-binaries-0.66.0%2brocm6.4.4avx-py3-none-linux-x86-64.whl",
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers",
+          "value": ";"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama_cpp_binaries-0.66.0+rocm6.4.4-py3-none-linux_x86_64.whl",
+      "version": "",
+      "purl": "pkg:pypi/https:%2F%2Fgithub.com%2Foobabooga%2Fllama-cpp-binaries%2Freleases%2Fdownload%2Fv0.66.0%2Fllama-cpp-binaries-0.66.0%252brocm6.4.4-py3-none-linux-x86-64.whl",
+      "type": "library",
+      "bom-ref": "pkg:pypi/https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama-cpp-binaries-0.66.0%2brocm6.4.4-py3-none-linux-x86-64.whl",
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers",
+          "value": ";"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama_cpp_binaries-0.66.0+cu124-py3-none-win_amd64.whl",
+      "version": "",
+      "purl": "pkg:pypi/https:%2F%2Fgithub.com%2Foobabooga%2Fllama-cpp-binaries%2Freleases%2Fdownload%2Fv0.66.0%2Fllama-cpp-binaries-0.66.0%252bcu124-py3-none-win-amd64.whl",
+      "type": "library",
+      "bom-ref": "pkg:pypi/https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama-cpp-binaries-0.66.0%2bcu124-py3-none-win-amd64.whl",
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers",
+          "value": ";"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama_cpp_binaries-0.66.0+cu124-py3-none-linux_x86_64.whl",
+      "version": "",
+      "purl": "pkg:pypi/https:%2F%2Fgithub.com%2Foobabooga%2Fllama-cpp-binaries%2Freleases%2Fdownload%2Fv0.66.0%2Fllama-cpp-binaries-0.66.0%252bcu124-py3-none-linux-x86-64.whl",
+      "type": "library",
+      "bom-ref": "pkg:pypi/https://github.com/oobabooga/llama-cpp-binaries/releases/download/v0.66.0/llama-cpp-binaries-0.66.0%2bcu124-py3-none-linux-x86-64.whl",
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers",
+          "value": ";"
+        }
+      ]
+    },
+    {
+      "author": "The HuggingFace team <zach.mueller@huggingface.co>",
+      "group": "",
+      "name": "accelerate",
+      "version": "1.8.0",
+      "description": "Accelerate",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "4c3460a8052e122fb124d92ec15618229951febbef1d7336a4c35371f78b72a1"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "url": "https://opensource.org/licenses/Apache-2.0"
+          }
+        },
+        {
+          "license": {
+            "name": "Apache"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/accelerate@1.8.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/huggingface/accelerate"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:pypi/accelerate@1.8.0",
+      "properties": [
+        {
+          "name": "cdx:pypi:latest_version",
+          "value": "1.12.0"
+        },
+        {
+          "name": "cdx:pypi:resolved_from",
+          "value": "accelerate"
+        }
+      ]
+    },
+    {
+      "author": "Jonathan Hartley <tartley@tartley.com>",
+      "group": "",
+      "name": "colorama",
+      "version": "0.4.6",
+      "description": "Cross-platform colored terminal text.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "0BSD",
+            "url": "https://opensource.org/licenses/0BSD"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/colorama@0.4.6",
+      "type": "library",
+      "bom-ref": "pkg:pypi/colorama@0.4.6",
+      "evidence": {
+        "identity": {
+          "field": "version",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "source-code-analysis",
+              "confidence": 0.5,
+              "value": "PyPI package: colorama"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers"
+        }
+      ]
+    },
+    {
+      "author": "HuggingFace Inc. <thomas@huggingface.co>",
+      "group": "",
+      "name": "datasets",
+      "version": "4.4.1",
+      "description": "HuggingFace community-driven open-source library of datasets",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "c1163de5211e42546079ab355cc0250c7e6db16eb209ac5ac6252f801f596c44"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "url": "https://opensource.org/licenses/Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/datasets@4.4.1",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/huggingface/datasets"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:pypi/datasets@4.4.1",
+      "evidence": {
+        "identity": {
+          "field": "version",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "source-code-analysis",
+              "confidence": 0.5,
+              "value": "PyPI package: datasets"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers"
+        }
+      ]
+    },
+    {
+      "author": "The Hugging Face team (past and future) with the help of all our contributors (https://github.com/huggingface/diffusers/graphs/contributors) <diffusers@huggingface.co>",
+      "group": "",
+      "name": "diffusers",
+      "version": "0.36.0",
+      "description": "State-of-the-art diffusion in PyTorch and JAX.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "525d42abc74bfc3b2db594999961295c054b48ef40a11724dacf50e6abd1af98"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "url": "https://opensource.org/licenses/Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/diffusers@0.36.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/huggingface/diffusers"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:pypi/diffusers@0.36.0"
+    },
+    {
+      "author": "Alex Rogozhnikov",
+      "group": "",
+      "name": "einops",
+      "version": "0.8.1",
+      "description": "A new flavour of deep learning operations",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "919387eb55330f5757c6bea9165c5ff5cfe63a642682ea788a6d472576d81737"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/einops@0.8.1",
+      "type": "library",
+      "bom-ref": "pkg:pypi/einops@0.8.1",
+      "evidence": {
+        "identity": {
+          "field": "version",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "source-code-analysis",
+              "confidence": 0.5,
+              "value": "PyPI package: einops"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers"
+        }
+      ]
+    },
+    {
+      "author": "The Pandas Development Team <pandas-dev@python.org>",
+      "group": "",
+      "name": "pandas",
+      "version": "2.3.3",
+      "description": "Powerful data structures for data analysis, time series, and statistics",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "376c6446ae31770764215a6c937f72d917f214b43560603cd60da6408f183b6c"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "0BSD",
+            "url": "https://opensource.org/licenses/0BSD"
+          }
+        },
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "url": "https://opensource.org/licenses/Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/pandas@2.3.3",
+      "type": "framework",
+      "bom-ref": "pkg:pypi/pandas@2.3.3",
+      "evidence": {
+        "identity": {
+          "field": "version",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "source-code-analysis",
+              "confidence": 0.5,
+              "value": "PyPI package: pandas"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers"
+        }
+      ]
+    },
+    {
+      "author": "The HuggingFace team <benjamin@huggingface.co>",
+      "group": "",
+      "name": "peft",
+      "version": "0.18.0",
+      "description": "Parameter-Efficient Fine-Tuning (PEFT)",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "624f69ca6393b765ccc6734adda7ca57d80b238f0900a42c357d8b67a03d62ff"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "url": "https://opensource.org/licenses/Apache-2.0"
+          }
+        },
+        {
+          "license": {
+            "name": "Apache"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/peft@0.18.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/huggingface/peft"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:pypi/peft@0.18.0"
+    },
+    {
+      "author": "\"Jeffrey A. Clark\" <aclark@aclark.net>",
+      "group": "",
+      "name": "pillow",
+      "version": "9.5.0",
+      "description": "Python Imaging Library (fork)",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ace6ca218308447b9077c14ea4ef381ba0b67ee78d64046b3f19cf4e1139ad16"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:pypi/pillow@9.5.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/pillow@9.5.0",
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers",
+          "value": ">=9.5.0"
+        },
+        {
+          "name": "cdx:pypi:latest_version",
+          "value": "12.0.0"
+        },
+        {
+          "name": "cdx:pypi:resolved_from",
+          "value": "Pillow"
+        }
+      ]
+    },
+    {
+      "author": "Giampaolo Rodola <g.rodola@gmail.com>",
+      "group": "",
+      "name": "psutil",
+      "version": "7.1.3",
+      "description": "Cross-platform lib for process and system monitoring.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "0005da714eee687b4b8decd3d6cc7c6db36215c9e74e5ad2264b90c3df7d92dc"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/psutil@7.1.3",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/giampaolo/psutil"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:pypi/psutil@7.1.3",
+      "evidence": {
+        "identity": {
+          "field": "version",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "source-code-analysis",
+              "confidence": 0.5,
+              "value": "PyPI package: psutil"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers"
+        }
+      ]
+    },
+    {
+      "author": "Nicolas Patry <patry.nicolas@protonmail.com>",
+      "group": "",
+      "name": "safetensors",
+      "version": "0.6.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "url": "https://opensource.org/licenses/Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/safetensors@0.6.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/safetensors@0.6.0",
+      "properties": [
+        {
+          "name": "cdx:pypi:latest_version",
+          "value": "0.7.0"
+        },
+        {
+          "name": "cdx:pypi:resolved_from",
+          "value": "safetensors"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "scipy",
+      "version": "1.16.3",
+      "description": "Fundamental algorithms for scientific computing in Python",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "40be6cf99e68b6c4321e9f8782e7d5ff8265af28ef2cd56e9c9b2638fa08ad97"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "0BSD",
+            "url": "https://opensource.org/licenses/0BSD"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/scipy@1.16.3",
+      "type": "framework",
+      "bom-ref": "pkg:pypi/scipy@1.16.3",
+      "evidence": {
+        "identity": {
+          "field": "version",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "source-code-analysis",
+              "confidence": 0.5,
+              "value": "PyPI package: scipy"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers"
+        }
+      ]
+    },
+    {
+      "author": "Taku Kudo <taku@google.com>",
+      "group": "",
+      "name": "sentencepiece",
+      "version": "0.2.1",
+      "description": "Unsupervised text tokenizer and detokenizer.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "e10fa50bdbaa5e2445dbd387979980d391760faf0ec99a09bd7780ff37eaec44"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:pypi/sentencepiece@0.2.1",
+      "type": "library",
+      "bom-ref": "pkg:pypi/sentencepiece@0.2.1",
+      "evidence": {
+        "identity": {
+          "field": "version",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "source-code-analysis",
+              "confidence": 0.5,
+              "value": "PyPI package: sentencepiece"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers"
+        }
+      ]
+    },
+    {
+      "author": "Google Inc. <packages@tensorflow.org>",
+      "group": "",
+      "name": "tensorboard",
+      "version": "2.20.0",
+      "description": "TensorBoard lets you watch Tensors Flow",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "9dc9f978cb84c0723acf9a345d96c184f0293d18f166bb8d59ee098e6cfaaba6"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "url": "https://opensource.org/licenses/Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/tensorboard@2.20.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/tensorflow/tensorboard"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:pypi/tensorboard@2.20.0",
+      "evidence": {
+        "identity": {
+          "field": "version",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "source-code-analysis",
+              "confidence": 0.5,
+              "value": "PyPI package: tensorboard"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "torchao",
+      "version": "0.14.0",
+      "description": "Package for applying ao techniques to GPU models",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "3508151beb43ab6dd0f70427389f387cf1cd367f2326e9c6102133991e147b67"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:pypi/torchao@0.14.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/pytorch/ao"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:pypi/torchao@0.14.0",
+      "properties": [
+        {
+          "name": "cdx:pypi:latest_version",
+          "value": "0.14.1"
+        },
+        {
+          "name": "cdx:pypi:resolved_from",
+          "value": "torchao"
+        }
+      ]
+    },
+    {
+      "author": "The Hugging Face team (past and future) with the help of all our contributors (https://github.com/huggingface/transformers/graphs/contributors) <transformers@huggingface.co>",
+      "group": "",
+      "name": "transformers",
+      "version": "4.57.0",
+      "description": "State-of-the-art Machine Learning for JAX, PyTorch and TensorFlow",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "9d7c6d098c026e40d897e017ed1f481ab803cbac041021dbc6ae6100e4949b55"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "url": "https://opensource.org/licenses/Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/transformers@4.57.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/huggingface/transformers"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:pypi/transformers@4.57.0",
+      "properties": [
+        {
+          "name": "cdx:pypi:latest_version",
+          "value": "4.57.3"
+        },
+        {
+          "name": "cdx:pypi:resolved_from",
+          "value": "transformers"
+        }
+      ]
+    },
+    {
+      "author": "Philippe Tillet, Dian Wu <phil@openai.com, woctordho@outlook.com>",
+      "group": "",
+      "name": "triton-windows",
+      "version": "3.5.1.post21;",
+      "description": "A language and compiler for custom Deep Learning operations",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/triton-windows@3.5.1.post21%3B",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/woct0rdho/triton-windows"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:pypi/triton-windows@3.5.1.post21;",
+      "properties": [
+        {
+          "name": "cdx:pypi:latest_version",
+          "value": "3.5.1.post22"
+        },
+        {
+          "name": "cdx:pypi:resolved_from",
+          "value": "triton-windows"
+        }
+      ]
+    },
+    {
+      "author": "Weights & Biases <support@wandb.com>",
+      "group": "",
+      "name": "wandb",
+      "version": "0.23.1",
+      "description": "A CLI and library for interacting with the Weights & Biases API.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "358e15471d19b7d73fc464e37371c19d44d39e433252ac24df107aff993a286b"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/wandb@0.23.1",
+      "type": "library",
+      "bom-ref": "pkg:pypi/wandb@0.23.1",
+      "evidence": {
+        "identity": {
+          "field": "version",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "source-code-analysis",
+              "confidence": 0.5,
+              "value": "PyPI package: wandb"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers"
+        }
+      ]
+    },
+    {
+      "author": "Tim Dettmers <dettmers@cs.washington.edu>",
+      "group": "",
+      "name": "bitsandbytes",
+      "version": "0.48.0",
+      "description": "k-bit optimizers and matrix multiplication routines.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "a9cc5132d9e2a4052bd75352f500d9d69c62d25073a8412121571d82eb15f9cb"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:pypi/bitsandbytes@0.48.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/bitsandbytes@0.48.0",
+      "properties": [
+        {
+          "name": "cdx:pypi:latest_version",
+          "value": "0.49.0"
+        },
+        {
+          "name": "cdx:pypi:resolved_from",
+          "value": "bitsandbytes"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "flash-linear-attention",
+      "version": "0.4.0",
+      "description": "Fast linear attention models and layers",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "50c97163f7cb64dc53585194ef36af44d2a6bc545227c4f73bb3ba9062630f1a"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:pypi/flash-linear-attention@0.4.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/flash-linear-attention@0.4.0"
+    },
+    {
+      "group": "",
+      "name": "https://github.com/turboderp-org/exllamav3/releases/download/v0.0.17/exllamav3-0.0.17+cu128.torch2.7.0-cp311-cp311-win_amd64.whl",
+      "version": "",
+      "purl": "pkg:pypi/https:%2F%2Fgithub.com%2Fturboderp-org%2Fexllamav3%2Freleases%2Fdownload%2Fv0.0.17%2Fexllamav3-0.0.17%252bcu128.torch2.7.0-cp311-cp311-win-amd64.whl",
+      "type": "library",
+      "bom-ref": "pkg:pypi/https://github.com/turboderp-org/exllamav3/releases/download/v0.0.17/exllamav3-0.0.17%2bcu128.torch2.7.0-cp311-cp311-win-amd64.whl",
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers",
+          "value": ";"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "https://github.com/turboderp-org/exllamav3/releases/download/v0.0.17/exllamav3-0.0.17+cu128.torch2.7.0-cp311-cp311-linux_x86_64.whl",
+      "version": "",
+      "purl": "pkg:pypi/https:%2F%2Fgithub.com%2Fturboderp-org%2Fexllamav3%2Freleases%2Fdownload%2Fv0.0.17%2Fexllamav3-0.0.17%252bcu128.torch2.7.0-cp311-cp311-linux-x86-64.whl",
+      "type": "library",
+      "bom-ref": "pkg:pypi/https://github.com/turboderp-org/exllamav3/releases/download/v0.0.17/exllamav3-0.0.17%2bcu128.torch2.7.0-cp311-cp311-linux-x86-64.whl",
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers",
+          "value": ";"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "https://github.com/turboderp-org/exllamav2/releases/download/v0.3.2/exllamav2-0.3.2+cu128.torch2.7.0-cp311-cp311-win_amd64.whl",
+      "version": "",
+      "purl": "pkg:pypi/https:%2F%2Fgithub.com%2Fturboderp-org%2Fexllamav2%2Freleases%2Fdownload%2Fv0.3.2%2Fexllamav2-0.3.2%252bcu128.torch2.7.0-cp311-cp311-win-amd64.whl",
+      "type": "library",
+      "bom-ref": "pkg:pypi/https://github.com/turboderp-org/exllamav2/releases/download/v0.3.2/exllamav2-0.3.2%2bcu128.torch2.7.0-cp311-cp311-win-amd64.whl",
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers",
+          "value": ";"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "https://github.com/turboderp-org/exllamav2/releases/download/v0.3.2/exllamav2-0.3.2+cu128.torch2.7.0-cp311-cp311-linux_x86_64.whl",
+      "version": "",
+      "purl": "pkg:pypi/https:%2F%2Fgithub.com%2Fturboderp-org%2Fexllamav2%2Freleases%2Fdownload%2Fv0.3.2%2Fexllamav2-0.3.2%252bcu128.torch2.7.0-cp311-cp311-linux-x86-64.whl",
+      "type": "library",
+      "bom-ref": "pkg:pypi/https://github.com/turboderp-org/exllamav2/releases/download/v0.3.2/exllamav2-0.3.2%2bcu128.torch2.7.0-cp311-cp311-linux-x86-64.whl",
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers",
+          "value": ";"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "https://github.com/turboderp-org/exllamav2/releases/download/v0.3.2/exllamav2-0.3.2-py3-none-any.whl",
+      "version": "",
+      "purl": "pkg:pypi/https:%2F%2Fgithub.com%2Fturboderp-org%2Fexllamav2%2Freleases%2Fdownload%2Fv0.3.2%2Fexllamav2-0.3.2-py3-none-any.whl",
+      "type": "library",
+      "bom-ref": "pkg:pypi/https://github.com/turboderp-org/exllamav2/releases/download/v0.3.2/exllamav2-0.3.2-py3-none-any.whl",
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers",
+          "value": ";"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "https://github.com/kingbri1/flash-attention/releases/download/v2.8.3/flash_attn-2.8.3+cu128torch2.7.0cxx11abiFALSE-cp311-cp311-win_amd64.whl",
+      "version": "",
+      "purl": "pkg:pypi/https:%2F%2Fgithub.com%2Fkingbri1%2Fflash-attention%2Freleases%2Fdownload%2Fv2.8.3%2Fflash-attn-2.8.3%252bcu128torch2.7.0cxx11abifalse-cp311-cp311-win-amd64.whl",
+      "type": "library",
+      "bom-ref": "pkg:pypi/https://github.com/kingbri1/flash-attention/releases/download/v2.8.3/flash-attn-2.8.3%2bcu128torch2.7.0cxx11abifalse-cp311-cp311-win-amd64.whl",
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers",
+          "value": ";"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "https://github.com/Dao-AILab/flash-attention/releases/download/v2.8.3/flash_attn-2.8.3+cu12torch2.7cxx11abiFALSE-cp311-cp311-linux_x86_64.whl",
+      "version": "",
+      "purl": "pkg:pypi/https:%2F%2Fgithub.com%2Fdao-ailab%2Fflash-attention%2Freleases%2Fdownload%2Fv2.8.3%2Fflash-attn-2.8.3%252bcu12torch2.7cxx11abifalse-cp311-cp311-linux-x86-64.whl",
+      "type": "library",
+      "bom-ref": "pkg:pypi/https://github.com/dao-ailab/flash-attention/releases/download/v2.8.3/flash-attn-2.8.3%2bcu12torch2.7cxx11abifalse-cp311-cp311-linux-x86-64.whl",
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers",
+          "value": ";"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "https://github.com/turboderp-org/exllamav2/releases/download/v0.3.2/exllamav2-0.3.2+rocm6.2.4.torch2.6.0-cp311-cp311-linux_x86_64.whl",
+      "version": "",
+      "purl": "pkg:pypi/https:%2F%2Fgithub.com%2Fturboderp-org%2Fexllamav2%2Freleases%2Fdownload%2Fv0.3.2%2Fexllamav2-0.3.2%252brocm6.2.4.torch2.6.0-cp311-cp311-linux-x86-64.whl",
+      "type": "library",
+      "bom-ref": "pkg:pypi/https://github.com/turboderp-org/exllamav2/releases/download/v0.3.2/exllamav2-0.3.2%2brocm6.2.4.torch2.6.0-cp311-cp311-linux-x86-64.whl",
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers",
+          "value": ";"
+        }
+      ]
+    },
+    {
+      "author": "Anthony Zhang (Uberi) <azhang9@gmail.com>",
+      "group": "",
+      "name": "SpeechRecognition",
+      "version": "3.10.0",
+      "description": "Library for performing speech recognition, with support for several engines and APIs, online and offline.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "7ae9966887d9909ce3e5a0c27ecc3eacfca16fd0c0829f77f552919418e86306"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "0BSD",
+            "url": "https://opensource.org/licenses/0BSD"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/speechrecognition@3.10.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/Uberi/speech_recognition#readme"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:pypi/speechrecognition@3.10.0",
+      "properties": [
+        {
+          "name": "cdx:pypi:latest_version",
+          "value": "3.14.4"
+        },
+        {
+          "name": "cdx:pypi:resolved_from",
+          "value": "SpeechRecognition"
+        }
+      ]
+    },
+    {
+      "author": "OpenAI",
+      "group": "",
+      "name": "openai-whisper",
+      "version": "20250625",
+      "description": "Robust Speech Recognition via Large-Scale Weak Supervision",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "37a91a3921809d9f44748ffc73c0a55c9f366c85a3ef5c2ae0cc09540432eb96"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/openai-whisper@20250625",
+      "type": "library",
+      "bom-ref": "pkg:pypi/openai-whisper@20250625",
+      "evidence": {
+        "identity": {
+          "field": "version",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "source-code-analysis",
+              "confidence": 0.5,
+              "value": "PyPI package: openai-whisper"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers"
+        }
+      ]
+    },
+    {
+      "author": "Bastian Bechtold <basti@bastibe.de>",
+      "group": "",
+      "name": "soundfile",
+      "version": "0.13.1",
+      "description": "An audio library based on libsndfile, CFFI and NumPy",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "a23c717560da2cf4c7b5ae1142514e0fd82d6bbd9dfc93a50423447142f2c445"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "0BSD",
+            "url": "https://opensource.org/licenses/0BSD"
+          }
+        },
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/soundfile@0.13.1",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/bastibe/python-soundfile"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:pypi/soundfile@0.13.1",
+      "evidence": {
+        "identity": {
+          "field": "version",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "source-code-analysis",
+              "confidence": 0.5,
+              "value": "PyPI package: soundfile"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers"
+        }
+      ]
+    },
+    {
+      "author": "SkeyJIA <363604236@qq.com>",
+      "group": "",
+      "name": "ffmpeg",
+      "version": "1.4",
+      "description": "ffmpeg python package url [https://github.com/jiashaokun/ffmpeg]",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "6931692c890ff21d39938433c2189747815dca0c60ddc7f9bb97f199dba0b5b9"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT Licence"
+        }
+      ],
+      "purl": "pkg:pypi/ffmpeg@1.4",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/jiashaokun/ffmpeg"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:pypi/ffmpeg@1.4",
+      "evidence": {
+        "identity": {
+          "field": "version",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "source-code-analysis",
+              "confidence": 0.5,
+              "value": "PyPI package: ffmpeg"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers"
+        }
+      ]
+    },
+    {
+      "author": "Leonard Richardson <leonardr@segfault.org>",
+      "group": "",
+      "name": "beautifulsoup4",
+      "version": "4.13.3",
+      "description": "Screen-scraping library",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "99045d7d3f08f91f0d656bc9b7efbae189426cd913d830294a15eefa0ea4df16"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/beautifulsoup4@4.13.3",
+      "type": "library",
+      "bom-ref": "pkg:pypi/beautifulsoup4@4.13.3",
+      "properties": [
+        {
+          "name": "cdx:pypi:latest_version",
+          "value": "4.14.3"
+        },
+        {
+          "name": "cdx:pypi:resolved_from",
+          "value": "beautifulsoup4"
+        }
+      ]
+    },
+    {
+      "author": "Jeff Huber <jeff@trychroma.com>, Anton Troynikov <anton@trychroma.com>",
+      "group": "",
+      "name": "chromadb",
+      "version": "0.6.3",
+      "description": "Chroma.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "4851258489a3612b558488d98d09ae0fe0a28d5cad6bd1ba64b96fdc419dc0e5"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "url": "https://opensource.org/licenses/Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/chromadb@0.6.3",
+      "type": "library",
+      "bom-ref": "pkg:pypi/chromadb@0.6.3",
+      "properties": [
+        {
+          "name": "cdx:pypi:latest_version",
+          "value": "1.3.7"
+        },
+        {
+          "name": "cdx:pypi:resolved_from",
+          "value": "chromadb"
+        }
+      ]
+    },
+    {
+      "author": "lxml dev team <lxml@lxml.de>",
+      "group": "",
+      "name": "lxml",
+      "version": "6.0.2",
+      "description": "Powerful and Pythonic XML processing library combining libxml2/libxslt with the ElementTree API.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "e77dd455b9a16bbd2a5036a63ddbd479c19572af81b624e79ef422f929eef388"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/lxml@6.0.2",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://lxml.de/"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:pypi/lxml@6.0.2",
+      "evidence": {
+        "identity": {
+          "field": "version",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "source-code-analysis",
+              "confidence": 0.5,
+              "value": "PyPI package: lxml"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers"
+        }
+      ]
+    },
+    {
+      "author": "NLTK Team <nltk.team@gmail.com>",
+      "group": "",
+      "name": "nltk",
+      "version": "3.9.2",
+      "description": "Natural Language Toolkit",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "1e209d2b3009110635ed9709a67a1a3e33a10f799490fa71cf4bec218c11c88a"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "url": "https://opensource.org/licenses/Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/nltk@3.9.2",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://www.nltk.org/"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:pypi/nltk@3.9.2",
+      "evidence": {
+        "identity": {
+          "field": "version",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "source-code-analysis",
+              "confidence": 0.5,
+              "value": "PyPI package: nltk"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers"
+        }
+      ]
+    },
+    {
+      "author": "Takuya Akiba",
+      "group": "",
+      "name": "optuna",
+      "version": "4.6.0",
+      "description": "A hyperparameter optimization framework",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "4c3a9facdef2b2dd7e3e2a8ae3697effa70fae4056fcf3425cfc6f5a40feb069"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/optuna@4.6.0",
+      "type": "framework",
+      "bom-ref": "pkg:pypi/optuna@4.6.0",
+      "evidence": {
+        "identity": {
+          "field": "version",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "source-code-analysis",
+              "confidence": 0.5,
+              "value": "PyPI package: optuna"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers"
+        }
+      ]
+    },
+    {
+      "author": "Posthog <PostHog <hey@posthog.com>>",
+      "group": "",
+      "name": "posthog",
+      "version": "3.13.0",
+      "description": "Integrate PostHog into any python application.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "0afd0132055a3da9c6b0ecf763e7f2ce2b66659ef16169883394d0835c30d501"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/posthog@3.13.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/posthog/posthog-python"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:pypi/posthog@3.13.0",
+      "properties": [
+        {
+          "name": "cdx:pypi:latest_version",
+          "value": "7.0.1"
+        },
+        {
+          "name": "cdx:pypi:resolved_from",
+          "value": "posthog"
+        }
+      ]
+    },
+    {
+      "author": "Nils Reimers <info@nils-reimers.de>, Tom Aarsen <tom.aarsen@huggingface.co>",
+      "group": "",
+      "name": "sentence_transformers",
+      "version": "3.3.1",
+      "description": "Embeddings, Retrieval, and Reranking",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "abffcc79dab37b7d18d21a26d5914223dd42239cfe18cb5e111c66c54b658ae7"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "url": "https://opensource.org/licenses/Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/sentence-transformers@3.3.1",
+      "type": "library",
+      "bom-ref": "pkg:pypi/sentence-transformers@3.3.1",
+      "properties": [
+        {
+          "name": "cdx:pypi:latest_version",
+          "value": "5.2.0"
+        },
+        {
+          "name": "cdx:pypi:resolved_from",
+          "value": "sentence_transformers"
+        }
+      ]
+    },
+    {
+      "author": "Explosion <contact@explosion.ai>",
+      "group": "",
+      "name": "spacy",
+      "version": "3.8.11",
+      "description": "Industrial-strength Natural Language Processing (NLP) in Python",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "f9cc7f775cfc41ccb8be63bd6258a1ec4613d4ad3859f2ba2c079f34240b21f6"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/spacy@3.8.11",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://spacy.io"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:pypi/spacy@3.8.11",
+      "evidence": {
+        "identity": {
+          "field": "version",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "source-code-analysis",
+              "confidence": 0.5,
+              "value": "PyPI package: spacy"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers"
+        }
+      ]
+    },
+    {
+      "author": "\"derwen.ai\" <info@derwen.ai>",
+      "group": "",
+      "name": "pytextrank",
+      "version": "3.3.0",
+      "description": "Python implementation of TextRank as a spaCy pipeline extension, for graph-based natural language work plus related knowledge graph practices; used for for phrase extraction of text documents.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "bca2d76ceeb3507dac222c32c74f3cf62df5ec58223d4a48166b3a15a310c2d7"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/pytextrank@3.3.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/pytextrank@3.3.0",
+      "evidence": {
+        "identity": {
+          "field": "version",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "source-code-analysis",
+              "confidence": 0.5,
+              "value": "PyPI package: pytextrank"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers"
+        }
+      ]
+    },
+    {
+      "author": "Taro Ogawa <tso at users sourceforge net> <tos@users.sourceforge.net>",
+      "group": "",
+      "name": "num2words",
+      "version": "0.5.14",
+      "description": "Modules to convert numbers to words. Easily extensible.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "1c8e5b00142fc2966fd8d685001e36c4a9911e070d1b120e1beb721fa1edb33d"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "LGPL-2.1-only",
+            "url": "https://opensource.org/licenses/LGPL-2.1-only"
+          }
+        },
+        {
+          "license": {
+            "name": "LGPL"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/num2words@0.5.14",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/savoirfairelinux/num2words"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:pypi/num2words@0.5.14",
+      "evidence": {
+        "identity": {
+          "field": "version",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "source-code-analysis",
+              "confidence": 0.5,
+              "value": "PyPI package: num2words"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers"
+        }
+      ]
+    },
+    {
+      "author": "Artifex <support@artifex.com>",
+      "group": "",
+      "name": "PyMuPDF",
+      "version": "1.26.7",
+      "description": "A high performance Python library for data extraction, analysis, conversion & manipulation of PDF (and other) documents.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "07085718dfdae5ab83b05eb5eb397f863bcc538fe05135318a01ea353e7a1353"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "Dual Licensed - GNU AFFERO GPL 3.0 or Artifex Commercial License"
+        }
+      ],
+      "purl": "pkg:pypi/pymupdf@1.26.7",
+      "type": "library",
+      "bom-ref": "pkg:pypi/pymupdf@1.26.7",
+      "evidence": {
+        "identity": {
+          "field": "version",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "source-code-analysis",
+              "confidence": 0.5,
+              "value": "PyPI package: PyMuPDF"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers"
+        }
+      ]
+    },
+    {
+      "author": "Steve Canny <stcanny@gmail.com>",
+      "group": "",
+      "name": "python-docx",
+      "version": "1.2.0",
+      "description": "Create, read, and update Microsoft Word .docx files.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "3fd478f3250fbbbfd3b94fe1e985955737c145627498896a8a6bf81f4baf66c7"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/python-docx@1.2.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/python-docx@1.2.0",
+      "evidence": {
+        "identity": {
+          "field": "version",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "source-code-analysis",
+              "confidence": 0.5,
+              "value": "PyPI package: python-docx"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers"
+        }
+      ]
+    },
+    {
+      "author": "Steve Canny <stcanny@gmail.com>",
+      "group": "",
+      "name": "python-pptx",
+      "version": "1.0.2",
+      "description": "Create, read, and update PowerPoint 2007+ (.pptx) files.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "160838e0b8565a8b1f67947675886e9fea18aa5e795db7ae531606d68e785cba"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/python-pptx@1.0.2",
+      "type": "library",
+      "bom-ref": "pkg:pypi/python-pptx@1.0.2",
+      "evidence": {
+        "identity": {
+          "field": "version",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "source-code-analysis",
+              "confidence": 0.5,
+              "value": "PyPI package: python-pptx"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers"
+        }
+      ]
+    },
+    {
+      "author": "See AUTHORS <charlie.clark@clark-consulting.eu>",
+      "group": "",
+      "name": "openpyxl",
+      "version": "3.1.5",
+      "description": "A Python library to read/write Excel 2010 xlsx/xlsm files",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "5282c12b107bffeef825f4617dc029afaf41d0ea60823bbb665ef3079dc79de2"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/openpyxl@3.1.5",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://openpyxl.readthedocs.io"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:pypi/openpyxl@3.1.5",
+      "evidence": {
+        "identity": {
+          "field": "version",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "source-code-analysis",
+              "confidence": 0.5,
+              "value": "PyPI package: openpyxl"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers"
+        }
+      ]
+    },
+    {
+      "author": "Soren Roug <soren.roug@eea.europa.eu>",
+      "group": "",
+      "name": "odfpy",
+      "version": "1.4.1",
+      "description": "Python API and tools to manipulate OpenDocument files",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "fc3b8d1bc098eba4a0fda865a76d9d1e577c4ceec771426bcb169a82c5e9dfe0"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "url": "https://opensource.org/licenses/Apache-2.0"
+          }
+        },
+        {
+          "license": {
+            "id": "GPL-1.0-only",
+            "url": "https://opensource.org/licenses/GPL-1.0-only"
+          }
+        },
+        {
+          "license": {
+            "id": "LGPL-2.1-only",
+            "url": "https://opensource.org/licenses/LGPL-2.1-only"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/odfpy@1.4.1",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/eea/odfpy"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:pypi/odfpy@1.4.1",
+      "evidence": {
+        "identity": {
+          "field": "version",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "source-code-analysis",
+              "confidence": 0.5,
+              "value": "PyPI package: odfpy"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers"
+        }
+      ]
+    },
+    {
+      "author": "Leonard Richardson <leonardr@segfault.org>",
+      "group": "",
+      "name": "beautifulsoup4",
+      "version": "4.12.2",
+      "description": "Screen-scraping library",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "bd2520ca0d9d7d12694a53d44ac482d181b4ec1888909b035a3dbf40d0f57d4a"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/beautifulsoup4@4.12.2",
+      "type": "library",
+      "bom-ref": "pkg:pypi/beautifulsoup4@4.12.2",
+      "properties": [
+        {
+          "name": "cdx:pypi:latest_version",
+          "value": "4.14.3"
+        },
+        {
+          "name": "cdx:pypi:resolved_from",
+          "value": "beautifulsoup4"
+        }
+      ]
+    },
+    {
+      "author": "Jeff Huber <jeff@trychroma.com>, Anton Troynikov <anton@trychroma.com>",
+      "group": "",
+      "name": "chromadb",
+      "version": "0.4.24",
+      "description": "Chroma.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "3a08e237a4ad28b5d176685bd22429a03717fe09d35022fb230d516108da01da"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "url": "https://opensource.org/licenses/Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/chromadb@0.4.24",
+      "type": "library",
+      "bom-ref": "pkg:pypi/chromadb@0.4.24",
+      "properties": [
+        {
+          "name": "cdx:pypi:latest_version",
+          "value": "1.3.7"
+        },
+        {
+          "name": "cdx:pypi:resolved_from",
+          "value": "chromadb"
+        }
+      ]
+    },
+    {
+      "author": "The Pandas Development Team <pandas-dev@python.org>",
+      "group": "",
+      "name": "pandas",
+      "version": "2.0.3",
+      "description": "Powerful data structures for data analysis, time series, and statistics",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "e4c7c9f27a4185304c7caf96dc7d91bc60bc162221152de697c98eb0b2648dd8"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "0BSD",
+            "url": "https://opensource.org/licenses/0BSD"
+          }
+        },
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "url": "https://opensource.org/licenses/Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/pandas@2.0.3",
+      "type": "framework",
+      "bom-ref": "pkg:pypi/pandas@2.0.3",
+      "properties": [
+        {
+          "name": "cdx:pypi:latest_version",
+          "value": "2.3.3"
+        },
+        {
+          "name": "cdx:pypi:resolved_from",
+          "value": "pandas"
+        }
+      ]
+    },
+    {
+      "author": "Posthog <PostHog <hey@posthog.com>>",
+      "group": "",
+      "name": "posthog",
+      "version": "2.4.2",
+      "description": "Integrate PostHog into any python application.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "8c7c37de997d955aea61bf0aa0069970e71f0d9d79c9e6b3a134e6593d5aa3d6"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/posthog@2.4.2",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/posthog/posthog-python"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:pypi/posthog@2.4.2",
+      "properties": [
+        {
+          "name": "cdx:pypi:latest_version",
+          "value": "7.0.1"
+        },
+        {
+          "name": "cdx:pypi:resolved_from",
+          "value": "posthog"
+        }
+      ]
+    },
+    {
+      "author": "Nils Reimers <info@nils-reimers.de>, Tom Aarsen <tom.aarsen@huggingface.co>",
+      "group": "",
+      "name": "sentence_transformers",
+      "version": "2.2.2",
+      "description": "Embeddings, Retrieval, and Reranking",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "dbc60163b27de21076c9a30d24b5b7b6fa05141d68cf2553fa9a77bf79a29136"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0",
+            "url": "https://opensource.org/licenses/Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/sentence-transformers@2.2.2",
+      "type": "library",
+      "bom-ref": "pkg:pypi/sentence-transformers@2.2.2",
+      "properties": [
+        {
+          "name": "cdx:pypi:latest_version",
+          "value": "5.2.0"
+        },
+        {
+          "name": "cdx:pypi:resolved_from",
+          "value": "sentence_transformers"
+        }
+      ]
+    },
+    {
+      "author": "The IPython Development Team <ipython-dev@python.org>",
+      "group": "",
+      "name": "ipython",
+      "version": "9.8.0",
+      "description": "IPython: Productive Interactive Computing",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ebe6d1d58d7d988fbf23ff8ff6d8e1622cfdb194daf4b7b73b792c4ec3b85385"
+        }
+      ],
+      "licenses": [],
+      "purl": "pkg:pypi/ipython@9.8.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/ipython@9.8.0",
+      "evidence": {
+        "identity": {
+          "field": "version",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "source-code-analysis",
+              "confidence": 0.5,
+              "value": "PyPI package: ipython"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers"
+        }
+      ]
+    },
+    {
+      "author": "Omry Yadan <omry@yadan.net>",
+      "group": "",
+      "name": "omegaconf",
+      "version": "2.3.0",
+      "description": "A flexible configuration library",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "7b4df175cdb08ba400f45cae3bdcae7ba8365db4d165fc65fd04b050ab63b46b"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "0BSD",
+            "url": "https://opensource.org/licenses/0BSD"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/omegaconf@2.3.0",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/omry/omegaconf"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:pypi/omegaconf@2.3.0",
+      "evidence": {
+        "identity": {
+          "field": "version",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "source-code-analysis",
+              "confidence": 0.5,
+              "value": "PyPI package: omegaconf"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers"
+        }
+      ]
+    },
+    {
+      "author": "James Robert <jiaaro@gmail.com>",
+      "group": "",
+      "name": "pydub",
+      "version": "0.25.1",
+      "description": "Manipulate audio with an simple and easy high level interface",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "65617e33033874b59d87db603aa1ed450633288aefead953b30bded59cb599a6"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/pydub@0.25.1",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "http://pydub.com"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:pypi/pydub@0.25.1",
+      "evidence": {
+        "identity": {
+          "field": "version",
+          "confidence": 0.5,
+          "methods": [
+            {
+              "technique": "source-code-analysis",
+              "confidence": 0.5,
+              "value": "PyPI package: pydub"
+            }
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "ngrok",
+      "version": "0.0",
+      "description": "The ngrok Agent SDK for Python",
+      "licenses": [
+        {
+          "expression": "MIT OR Apache-2.0"
+        }
+      ],
+      "purl": "pkg:pypi/ngrok@0.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/ngrok@0.0",
+      "properties": [
+        {
+          "name": "cdx:pypi:latest_version",
+          "value": "1.6.0"
+        },
+        {
+          "name": "cdx:pypi:resolved_from",
+          "value": "ngrok"
+        }
+      ]
+    },
+    {
+      "author": "Nidhal Baccouri <nidhalbacc@gmail.com>",
+      "group": "",
+      "name": "deep-translator",
+      "version": "1.9.2",
+      "description": "A flexible free and unlimited python tool to translate between different languages in a simple way using multiple translators",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "5ba891a70c1302244977798be82e1b7705cb1b6590829531dbc7f0c9bc50d0a2"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/deep-translator@1.9.2",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/nidhaloff/deep_translator"
+        }
+      ],
+      "type": "library",
+      "bom-ref": "pkg:pypi/deep-translator@1.9.2",
+      "properties": [
+        {
+          "name": "cdx:pypi:latest_version",
+          "value": "1.11.4"
+        },
+        {
+          "name": "cdx:pypi:resolved_from",
+          "value": "deep-translator"
+        }
+      ]
+    },
+    {
+      "author": "Eren Gölge <egolge@coqui.ai>",
+      "group": "",
+      "name": "coqui-tts",
+      "version": "0.27.0",
+      "description": "Deep learning for Text to Speech.",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "acf6a62c32bf4facfc2c5d1006815a82574eeaac170f7d973ee9f4dc87393e9c"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MPL-2.0",
+            "url": "https://opensource.org/licenses/MPL-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/coqui-tts@0.27.0",
+      "type": "library",
+      "bom-ref": "pkg:pypi/coqui-tts@0.27.0",
+      "properties": [
+        {
+          "name": "cdx:pypi:versionSpecifiers",
+          "value": ">=0.27.0"
+        },
+        {
+          "name": "cdx:pypi:latest_version",
+          "value": "0.27.3"
+        },
+        {
+          "name": "cdx:pypi:resolved_from",
+          "value": "coqui-tts"
+        }
+      ]
+    },
+    {
+      "group": "actions",
+      "name": "checkout",
+      "version": "v4",
+      "purl": "pkg:github/actions/checkout@v4",
+      "type": "application",
+      "bom-ref": "pkg:github/actions/checkout@v4"
+    },
+    {
+      "group": "actions",
+      "name": "setup-python",
+      "version": "v4",
+      "purl": "pkg:github/actions/setup-python@v4",
+      "type": "application",
+      "bom-ref": "pkg:github/actions/setup-python@v4"
+    },
+    {
+      "group": "svenstaro",
+      "name": "upload-release-action",
+      "version": "2.7.0",
+      "purl": "pkg:github/svenstaro/upload-release-action@2.7.0",
+      "type": "library",
+      "bom-ref": "pkg:github/svenstaro/upload-release-action@2.7.0"
+    }
+  ],
+  "services": [],
+  "dependencies": [
+    {
+      "ref": "pkg:pypi/text-generation-webui@latest",
+      "dependsOn": []
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "latest": "text-generation-webui-2025-12-14-with-vulns.json",
+  "items": [
+    {
+      "id": "text-generation-webui-2025-12-12",
+      "label": "text-generation-webui",
+      "file": "text-generation-webui-2025-12-12-with-vulns.json"
+    },
+    {
+      "id": "text-generation-webui-2025-12-14",
+      "label": "text-generation-webui",
+      "file": "text-generation-webui-2025-12-14-with-vulns.json"
+    }
+  ]
+}

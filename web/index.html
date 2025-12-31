@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBOMVUL - SBOM Vulnerability Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="tooplate-nexus-brew.css" rel="stylesheet">
+
+    <style>
+      /* ==== SBOM Vulnerability Dashboard 전용 스타일 ==== */
+
+      #menu {
+        padding-top: 6rem;
+        padding-bottom: 4rem;
+      }
+
+      #menu .section-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      #menu h2.glitch {
+        margin-bottom: 1rem;
+      }
+
+      #menu .v-subtitle {
+        color: #9ca3af;
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .v-dashboard {
+        background: rgba(5, 10, 25, 0.9);
+        border-radius: 1rem;
+        padding: 1.5rem 1.75rem 2rem;
+        box-shadow: 0 18px 45px rgba(0,0,0,0.7);
+        border: 1px solid rgba(148, 163, 184, 0.2);
+        backdrop-filter: blur(16px);
+      }
+
+      .v-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .v-card {
+        background: radial-gradient(circle at top left, rgba(96,165,250,0.15), rgba(15,23,42,0.95));
+        border-radius: 0.9rem;
+        padding: 0.9rem 1rem;
+        min-width: 130px;
+        flex: 1 1 130px;
+        border: 1px solid rgba(148,163,184,0.3);
+      }
+
+      .v-card-title {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: #9ca3af;
+        margin-bottom: 0.15rem;
+      }
+
+      .v-card-value {
+        font-size: 1.5rem;
+        font-weight: 700;
+        font-family: "Orbitron", system-ui, sans-serif;
+      }
+
+      .v-filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+      }
+
+      .v-filters input,
+      .v-filters select {
+        background: rgba(15,23,42,0.95);
+        border: 1px solid #1f2937;
+        border-radius: 9999px;
+        padding: 0.4rem 0.9rem;
+        color: #e5e7eb;
+        font-size: 0.9rem;
+        font-family: "Exo 2", system-ui, sans-serif;
+      }
+
+      .v-filters input:focus,
+      .v-filters select:focus {
+        outline: 1px solid #6366f1;
+      }
+
+      .v-table-wrapper {
+        border-radius: 0.9rem;
+        overflow: hidden;
+        border: 1px solid rgba(55,65,81,0.8);
+        background: rgba(15,23,42,0.9);
+      }
+
+      table.v-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.85rem;
+      }
+
+      .v-table thead {
+        background: rgba(15,23,42, 0.98);
+      }
+
+      .v-table th,
+      .v-table td {
+        padding: 0.6rem 0.8rem;
+        border-bottom: 1px solid rgba(31,41,55,0.9);
+        vertical-align: top;
+      }
+
+      .v-table th {
+        text-align: left;
+        color: #9ca3af;
+        font-weight: 500;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        backdrop-filter: blur(10px);
+      }
+
+      .v-table tbody tr:hover {
+        background: rgba(30,64,175,0.35);
+      }
+
+      .v-severity-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.15rem 0.55rem;
+        border-radius: 9999px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-family: "Share Tech Mono", monospace;
+      }
+
+      .v-sev-critical { background: rgba(248,113,113,0.1); color: #fecaca; border: 1px solid #f87171; }
+      .v-sev-high     { background: rgba(248,113,113,0.07); color: #fca5a5; border: 1px solid #fb7185; }
+      .v-sev-medium   { background: rgba(251,191,36,0.08); color: #facc15; border: 1px solid #fbbf24; }
+      .v-sev-low      { background: rgba(52,211,153,0.08); color: #6ee7b7; border: 1px solid #10b981; }
+      .v-sev-unknown  { background: rgba(148,163,184,0.12); color: #e5e7eb; border: 1px solid #6b7280; }
+
+      .v-cve-link {
+        color: #a5b4fc;
+        text-decoration: none;
+      }
+
+      .v-cve-link:hover {
+        text-decoration: underline;
+      }
+
+      .v-tag {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.15rem 0.6rem;
+        border-radius: 9999px;
+        font-size: 0.7rem;
+        background: rgba(15,23,42,1);
+        border: 1px solid rgba(55,65,81,0.9);
+        color: #e5e7eb;
+        font-family: "Share Tech Mono", monospace;
+      }
+
+      .v-desc {
+        color: #9ca3af;
+      }
+
+      .v-desc-toggle {
+        cursor: pointer;
+        color: #a5b4fc;
+        font-size: 0.75rem;
+        margin-left: 0.25rem;
+      }
+
+      @media (max-width: 768px) {
+        .v-dashboard {
+          padding: 1.1rem 1.1rem 1.5rem;
+        }
+        .v-table th,
+        .v-table td {
+          font-size: 0.78rem;
+        }
+      }
+
+      /* ==== About 섹션 중앙 카드 스타일 ==== */
+
+      #about {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+      }
+
+      .about-tabs {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .about-content {
+        display: flex;
+        justify-content: center;
+      }
+
+      .about-card {
+        background: rgba(5, 10, 25, 0.95);
+        border-radius: 1rem;
+        padding: 2rem 2.5rem;
+        max-width: 800px;
+        width: 100%;
+        box-shadow: 0 18px 45px rgba(0,0,0,0.7);
+        border: 1px solid rgba(148, 163, 184, 0.25);
+      }
+
+      .about-card h3 {
+        margin-bottom: 1rem;
+        color: #f472b6;
+      }
+
+      .about-card p {
+        color: #e5e7eb;
+        line-height: 1.7;
+        font-size: 0.95rem;
+      }
+
+      .tab-content {
+        display: none;
+      }
+
+      .tab-content.active {
+        display: block;
+      }
+
+      .tab-button.active {
+        background: linear-gradient(90deg, #ec4899, #6366f1);
+        border-color: transparent;
+      }
+    </style>
+</head>
+<body>
+    <!-- Static patterns -->
+    <div class="static-pattern"></div>
+    <div class="hex-pattern"></div>
+
+    <!-- Animated background shapes -->
+    <div class="bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+    </div>
+
+    <!-- Grid overlay -->
+    <div class="grid-overlay"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">SBOMVUL</div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#menu" class="nav-link">Dashboard</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1 class="hero-title">SBOMVUL</h1>
+        <p class="hero-subtitle">SBOM에서 OSV·NVD까지, 오픈소스 공급망 취약점 한눈에 보기</p>
+        <div class="hero-buttons">
+            <a href="#menu" class="cta-button">VIEW VULNERABILITIES</a>
+            <a href="#about" class="cta-button cta-secondary">ABOUT PROJECT</a>
+        </div>
+    </section>
+
+    <!-- SBOM Vulnerability Dashboard Section -->
+    <section id="menu">
+        <div class="section-inner">
+            <h2 class="glitch">SBOM VULNERABILITY DASHBOARD</h2>
+            <p class="v-subtitle" id="subtitle">Loading vulnerabilities…</p>
+
+            <div class="v-dashboard">
+                <!-- Stats cards -->
+                <div class="v-cards">
+                    <div class="v-card">
+                        <div class="v-card-title">Total</div>
+                        <div class="v-card-value" id="stat-total">-</div>
+                    </div>
+                    <div class="v-card">
+                        <div class="v-card-title">Critical</div>
+                        <div class="v-card-value" id="stat-critical">-</div>
+                    </div>
+                    <div class="v-card">
+                        <div class="v-card-title">High</div>
+                        <div class="v-card-value" id="stat-high">-</div>
+                    </div>
+                    <div class="v-card">
+                        <div class="v-card-title">Medium</div>
+                        <div class="v-card-value" id="stat-medium">-</div>
+                    </div>
+                    <div class="v-card">
+                        <div class="v-card-title">Low</div>
+                        <div class="v-card-value" id="stat-low">-</div>
+                    </div>
+                </div>
+
+                <!-- Filters -->
+                <div class="v-filters">
+                    <!-- SBOM 선택 드롭다운 -->
+                    <select id="sbom-select">
+                        <option value="">Loading SBOM list…</option>
+                    </select>
+
+                    <input id="filter-text" type="text" placeholder="Search CVE ID / package / description" />
+                    <select id="filter-severity">
+                        <option value="">Severity: All</option>
+                        <option value="critical">Critical</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+
+                <!-- Table -->
+                <div class="v-table-wrapper">
+                    <table class="v-table">
+                        <thead>
+                            <tr>
+                                <th>Severity</th>
+                                <th>CVE</th>
+                                <th>Score</th>
+                                <th>Package</th>
+                                <th>Published</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody id="vuln-table-body">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="glitch">ABOUT</h2>
+        <div class="about-tabs">
+            <button class="tab-button active" onclick="showTab('story')">OVERVIEW</button>
+            <button class="tab-button" onclick="showTab('mission')">GOAL</button>
+            <button class="tab-button" onclick="showTab('technology')">STACK</button>
+        </div>
+
+        <div id="story" class="tab-content active">
+            <div class="about-content">
+                <div class="about-card">
+                    <h3>SBOMVUL Analyzer</h3>
+                    <p>SBOMVUL은 cdxgen으로 생성한 SBOM을 기반으로 OSV.dev와 NVD 데이터를 통합하여, 오픈소스 구성요소의 취약점을 한눈에 파악할 수 있도록 도와주는 분석 도구입니다.</p>
+                    <br>
+                    <p>컨테이너 내부에서 SBOM을 생성하고, 취약점 매핑 스크립트로 CVE, CVSS 점수, 영향 받는 패키지를 자동으로 수집한 뒤, 이 웹 대시보드에서 시각적으로 확인할 수 있습니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="mission" class="tab-content">
+            <div class="about-content">
+                <div class="about-card">
+                    <h3>Shift Left Security</h3>
+                    <p>목표는 개발자가 빌드·배포 단계 이전에 SBOM 기반 취약점 정보를 쉽게 확인하고, 우선순위를 정해 선제적으로 대응할 수 있도록 지원하는 것입니다.</p>
+                    <br>
+                    <p>개발팀이 “어떤 OSS를 어떤 버전으로 쓰고 있고, 어디에 어떤 취약점이 있는지”를 한 화면에서 확인할 수 있게 함으로써, 보안 이슈를 운영 단계가 아니라 개발 단계에서 미리 차단하는 것을 지향합니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="technology" class="tab-content">
+            <div class="about-content">
+                <div class="about-card">
+                    <h3>Tech Stack</h3>
+                    <p>cdxgen, CycloneDX SBOM, OSV.dev API, NVD JSON Feed, Python(Pandas) 기반 분석 스크립트, 그리고 컨테이너 환경 위에서 동작하는 자동화 파이프라인으로 구성됩니다.</p>
+                    <br>
+                    <p>웹 UI는 정적 HTML/JavaScript로 구성되어 SBOM 결과(JSON)를 읽어와 대시보드 형태로 렌더링하며, CI 파이프라인에 쉽게 붙일 수 있도록 설계되었습니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="glitch">CONTACT</h2>
+        <div class="contact-container">
+            <div class="contact-form">
+                <form onsubmit="event.preventDefault(); alert('Message sent!');">
+                    <div class="form-group">
+                        <label for="name">Name / Handle</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email or GitHub</label>
+                        <input type="text" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <h3>Project Info</h3>
+                <div class="info-item">
+                    <div class="info-icon">📁</div>
+                    <div class="info-text">
+                        <strong>Repository</strong><br>
+                        <a href="https://github.com/Seeunsama" target="_blank" rel="noopener noreferrer">
+                            https://github.com/Seeunsama
+                        </a>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">🔐</div>
+                    <div class="info-text">
+                        <strong>Focus</strong><br>
+                        SBOM · Supply Chain Security · OSV/NVD Integration
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#careers">Careers</a>
+            </div>
+            <div class="copyright">
+            © 2026 SBOMVUL. All rights reserved.
+            <br> Design base: <a href="https://www.tooplate.com" target="_blank" rel="nofollow noopener">Tooplate</a></div>
+        </div>
+    </footer>
+
+    <script src="tooplate-nexus-scripts.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // index.html 기준: JSON은 ../sbom_data/ 밑에 저장됨
+        const DATA_BASE = "../sbom_data/";
+        const INDEX_URL = "sbom_index.json";
+
+        const statEls = {
+          total: document.getElementById("stat-total"),
+          critical: document.getElementById("stat-critical"),
+          high: document.getElementById("stat-high"),
+          medium: document.getElementById("stat-medium"),
+          low: document.getElementById("stat-low"),
+        };
+        const subtitleEl = document.getElementById("subtitle");
+        const tbody = document.getElementById("vuln-table-body");
+        const filterTextEl = document.getElementById("filter-text");
+        const filterSeverityEl = document.getElementById("filter-severity");
+        const sbomSelectEl = document.getElementById("sbom-select");
+
+        let allVulns = [];
+        let currentFile = null;
+        let currentLabel = "";
+
+        function severityClass(sev) {
+          if (!sev) return "v-sev-unknown";
+          const s = sev.toLowerCase();
+          if (s === "critical") return "v-sev-critical";
+          if (s === "high")     return "v-sev-high";
+          if (s === "medium")   return "v-sev-medium";
+          if (s === "low")      return "v-sev-low";
+          return "v-sev-unknown";
+        }
+
+        // description 한 줄 요약 (Markdown 제거 + "This vulnerability" 이후 우선)
+        function oneLineSummary(text, length = 150) {
+          if (!text) return "";
+
+          let cleaned = text
+            .replace(/\*\*/g, "")             // **기호 제거
+            .replace(/\*/g, "")               // *기호 제거
+            .replace(/^Impact.*?:/i, "")      // "Impact: ..." prefix 제거
+            .replace(/^Impact/i, "")          // "Impact" 단독 제거
+            .replace(/^What.*?\?/i, "")       // "What kind of vulnerability..." 제거
+            .replace(/\s+/g, " ")             // 공백 정리
+            .trim();
+
+          const idx = cleaned.indexOf("This vulnerability");
+          if (idx !== -1) cleaned = cleaned.slice(idx);
+
+          if (cleaned.length > length)
+            cleaned = cleaned.slice(0, length) + "…";
+
+          return cleaned;
+        }
+
+        function renderStats(vulns) {
+          const totals = {
+            total: vulns.length,
+            critical: 0,
+            high: 0,
+            medium: 0,
+            low: 0,
+          };
+
+          vulns.forEach(v => {
+            const sev = (v.ratings && v.ratings[0] && v.ratings[0].severity || "").toLowerCase();
+            if (["critical","high","medium","low"].includes(sev)) {
+              totals[sev]++;
+            }
+          });
+
+          statEls.total.textContent    = totals.total;
+          statEls.critical.textContent = totals.critical;
+          statEls.high.textContent     = totals.high;
+          statEls.medium.textContent   = totals.medium;
+          statEls.low.textContent      = totals.low;
+        }
+
+        function renderTable(vulns) {
+          tbody.innerHTML = "";
+
+          const sorted = vulns.slice().sort((a, b) => {
+            const ra = (a.ratings && a.ratings[0]) || {};
+            const rb = (b.ratings && b.ratings[0]) || {};
+            const sa = (ra.score !== undefined ? Number(ra.score) : -1);
+            const sb = (rb.score !== undefined ? Number(rb.score) : -1);
+            return sb - sa;
+          });
+
+          sorted.forEach(v => {
+            const tr = document.createElement("tr");
+
+            const rating = (v.ratings && v.ratings[0]) || {};
+            const sev = rating.severity || "unknown";
+            const score = rating.score ?? "";
+
+            const firstAffect = (v.affects && v.affects[0] && v.affects[0].ref) || "";
+
+            const sevTd = document.createElement("td");
+            const sevSpan = document.createElement("span");
+            sevSpan.className = "v-severity-badge " + severityClass(sev);
+            sevSpan.textContent = (sev || "unknown").toUpperCase();
+            sevTd.appendChild(sevSpan);
+
+            const cveTd = document.createElement("td");
+            const cveLink = document.createElement("a");
+            cveLink.href = v.source && v.source.url ? v.source.url : "#";
+            cveLink.target = "_blank";
+            cveLink.rel = "noreferrer";
+            cveLink.textContent = v.id;
+            cveLink.className = "v-cve-link";
+            cveTd.appendChild(cveLink);
+
+            const scoreTd = document.createElement("td");
+            scoreTd.textContent = score !== "" ? String(score) : "";
+
+            const pkgTd = document.createElement("td");
+            if (firstAffect) {
+              const tag = document.createElement("span");
+              tag.className = "v-tag";
+              tag.textContent = firstAffect;
+              pkgTd.appendChild(tag);
+            }
+
+            const pubTd = document.createElement("td");
+            pubTd.textContent = v.published ? v.published.split("T")[0] : "";
+
+            const descTd = document.createElement("td");
+            descTd.className = "v-desc";
+            descTd.textContent = oneLineSummary(v.description || "");
+
+            tr.appendChild(sevTd);
+            tr.appendChild(cveTd);
+            tr.appendChild(scoreTd);
+            tr.appendChild(pkgTd);
+            tr.appendChild(pubTd);
+            tr.appendChild(descTd);
+
+            tbody.appendChild(tr);
+          });
+        }
+
+        function applyFilters() {
+          const text = filterTextEl.value.toLowerCase();
+          const sevFilter = filterSeverityEl.value.toLowerCase();
+
+          const filtered = allVulns.filter(v => {
+            const rating = (v.ratings && v.ratings[0]) || {};
+            const sev = (rating.severity || "").toLowerCase();
+            const firstAffect = (v.affects && v.affects[0] && v.affects[0].ref) || "";
+            const composite = [
+              v.id || "",
+              firstAffect,
+              v.description || "",
+            ].join(" ").toLowerCase();
+
+            const matchText = !text || composite.includes(text);
+            const matchSev = !sevFilter || sev === sevFilter;
+
+            return matchText && matchSev;
+          });
+
+          renderStats(filtered);
+          renderTable(filtered);
+          subtitleEl.textContent =
+            `Showing ${filtered.length} of ${allVulns.length} vulnerabilities` +
+            (currentLabel ? ` (SBOM: ${currentLabel})` : "");
+        }
+
+        function loadVulns(fileName) {
+          if (!fileName) {
+            allVulns = [];
+            renderStats(allVulns);
+            renderTable(allVulns);
+            subtitleEl.textContent = "No SBOM selected.";
+            return;
+          }
+
+          currentFile = fileName;
+          const opt = sbomSelectEl.options[sbomSelectEl.selectedIndex];
+          currentLabel = opt ? opt.textContent : fileName;
+          subtitleEl.textContent = `Loading vulnerabilities from ${currentLabel}…`;
+
+          fetch(DATA_BASE + fileName)
+            .then(r => {
+              if (!r.ok) throw new Error(`HTTP ${r.status}`);
+              return r.json();
+            })
+            .then(data => {
+              if (Array.isArray(data)) {
+                allVulns = data;
+              } else if (Array.isArray(data.vulnerabilities)) {
+                allVulns = data.vulnerabilities;
+              } else {
+                console.warn("Unexpected JSON structure", data);
+                allVulns = [];
+              }
+
+              renderStats(allVulns);
+              renderTable(allVulns);
+              subtitleEl.textContent =
+                `Loaded ${allVulns.length} vulnerabilities from ${currentLabel}`;
+            })
+            .catch(err => {
+              console.error(err);
+              allVulns = [];
+              renderStats(allVulns);
+              renderTable(allVulns);
+              subtitleEl.textContent = `Failed to load ${currentLabel}`;
+            });
+        }
+
+        function initSbomSelect() {
+          fetch(INDEX_URL)
+            .then(r => {
+              if (!r.ok) throw new Error(`HTTP ${r.status}`);
+              return r.json();
+            })
+            .then(index => {
+              const items = index.items || [];
+              sbomSelectEl.innerHTML = "";
+
+              if (!items.length) {
+                const opt = document.createElement("option");
+                opt.value = "";
+                opt.textContent = "No SBOM data";
+                sbomSelectEl.appendChild(opt);
+                loadVulns(null);
+                return;
+              }
+
+              items.forEach(item => {
+                const opt = document.createElement("option");
+                opt.value = item.file;
+                opt.textContent = item.label;   // 여기에는 text-generation-webui 같은 짧은 이름
+                sbomSelectEl.appendChild(opt);
+              });
+
+              const initialFile =
+                index.latest ||
+                (items[0] && items[0].file);
+
+              if (initialFile) {
+                sbomSelectEl.value = initialFile;
+                loadVulns(initialFile);
+              }
+            })
+            .catch(err => {
+              console.error(err);
+              sbomSelectEl.innerHTML = "";
+              const opt = document.createElement("option");
+              opt.value = "";
+              opt.textContent = "Failed to load SBOM index";
+              sbomSelectEl.appendChild(opt);
+              loadVulns(null);
+            });
+
+          sbomSelectEl.addEventListener("change", () => {
+            const fileName = sbomSelectEl.value;
+            loadVulns(fileName || null);
+          });
+        }
+
+        filterTextEl.addEventListener("input", applyFilters);
+        filterSeverityEl.addEventListener("change", applyFilters);
+
+        // 초기: SBOM 목록 로딩
+        initSbomSelect();
+      });
+
+      // About 탭 전환 함수 (OVERVIEW / GOAL / STACK)
+      function showTab(tabName, el) {
+        const tabs = document.querySelectorAll(".tab-content");
+        const buttons = document.querySelectorAll(".tab-button");
+
+        const clickedButton =
+          el ||
+          (typeof event !== "undefined" && (event.currentTarget || event.target)) ||
+          null;
+
+        tabs.forEach(tab => tab.classList.remove("active"));
+        buttons.forEach(btn => btn.classList.remove("active"));
+
+        const target = document.getElementById(tabName);
+        if (target) target.classList.add("active");
+        if (clickedButton) clickedButton.classList.add("active");
+      }
+    </script>
+
+</body>
+</html>

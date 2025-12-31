@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Outputs / cache
+generated_sbom/
+sbom_data/
+*.log
+
+# Large data (DO NOT COMMIT)
+nvd_data/
+cve_cvss3_data.csv
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
